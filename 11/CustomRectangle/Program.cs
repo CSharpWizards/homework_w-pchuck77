@@ -26,4 +26,33 @@ namespace CustomRectangle {
 			Console.ReadLine();
 		}
 	}
+    public class Rectangle
+    {
+        public int x;
+        public int y;
+        public int width;
+        public int height;
+        public string symbol;
+        public void Draw()
+        {
+            Console.SetCursorPosition(x, y);
+            for (int i = 0; i < width; i++)
+            {
+                Console.Write(symbol);
+            }
+            for (int i = 1; i < height-1; i++)
+            {
+                Console.SetCursorPosition(x, y+i);
+                Console.Write(symbol);
+                Console.SetCursorPosition(x + width-1, y + i);
+                Console.Write(symbol);
+            }
+            Console.SetCursorPosition(x, y + height-1);
+            for (int i = 0; i < width ; i++)
+            {
+                Console.Write(symbol);
+            }
+        }
+
+    }
 }

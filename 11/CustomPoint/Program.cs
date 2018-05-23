@@ -22,4 +22,17 @@ namespace CustomPoint {
 			Console.ReadLine();
 		}
 	}
+   public class Point
+    {
+        public int x;
+        public int y;
+        public string symbol;
+        public void Draw()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(symbol);
+
+        }
+
+    }
 }
